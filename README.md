@@ -13,7 +13,12 @@ git clone https://github.com/Tommrodrigues/MacSwap
 bash ~/MacSwap/MacSwap.sh
 ```
 
-The script is fairly easy to use, simply run it using the command above to recieve the standart output. After running the script, you will be prompted to choose an option. For more information on the options, read below:
+The script is fairly easy to use, simply run it using the command above to recieve the standart output. After running the script, you will be prompted to choose an option:
+
+![Example](https://i.ibb.co/9n3JjJq/Screenshot-2018-12-06-at-14-39-57.png)
+
+
+For more information on the options, read below:
 
 | Number | Name | Description |
 | --- | --- | --- |
