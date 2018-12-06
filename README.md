@@ -3,7 +3,7 @@
 
 ## What is it?
 
-MacSwap allows you to easily change you MAC address for your Mac. This can be useful in a variety of cases, all of which accommodated for by MacSwap.
+MacSwap allows you to easily change your MAC address. This can be useful in a variety of cases, all of which are accommodated for by MacSwap.
 
 ## Usage
 
