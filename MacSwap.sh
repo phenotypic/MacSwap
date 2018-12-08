@@ -82,8 +82,7 @@ if [ "$CHOSENOPTION" == "1" ] || [ "$CHOSENOPTION" == "2" ]; then
   if [ -z "$ARPSCAN" ]; then
     printf "${REDT}[!] ${NC}ERROR: Scan failure, run again...\n"
     exit
-  fi
-  if [ "$SCANLENGTH" -gt "1" ]; then
+  elif [ "$SCANLENGTH" -gt "1" ]; then
     ARPMAC="$( echo "$ARPSCAN" | sed -n '2p' )"
   else
     ARPMAC=$ARPSCAN
