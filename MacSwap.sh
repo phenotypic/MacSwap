@@ -76,7 +76,7 @@ if [ "$CHOSENOPTION" == "1" ] || [ "$CHOSENOPTION" == "2" ]; then
     exit
   fi
 
-  ARPSCAN="$( arp -ani $WIFIINTERFACENAME | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}' | grep -E '^.{17}$' )"
+  ARPSCAN="$( arp -ani $WIFIINTERFACENAME | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}' | grep -E '^.{17}$' | grep -v 'ff:ff:ff:ff' )"
   SCANLENGTH="$( echo "$ARPSCAN" | wc -l | tr -dc '0-9' )"
 
   if [ -z "$ARPSCAN" ]; then
@@ -121,11 +121,6 @@ ARPMACLENGTH=${#ARPMAC}
 
 if [ "$ARPMACLENGTH" != "17" ]; then
   printf "\n${REDT}[!] ${NC}ERROR: Incorrect MAC length...\n"
-  exit
-fi
-
-if [[ "$ARPMAC" == *"ff:ff:ff:ff"* ]]; then
-  printf "\n${REDT}[!] ${NC}ERROR: Invalid MAC address, run again...\n"
   exit
 fi
 
