@@ -117,10 +117,11 @@ if [ "$CHOSENOPTION" == "5" ]; then
   ARPMAC="$REALMAC"
 fi
 
+ARPMAC="$( echo "$ARPMAC" | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}' )"
 ARPMACLENGTH=${#ARPMAC}
 
 if [ "$ARPMACLENGTH" != "17" ]; then
-  printf "\n${REDT}[!] ${NC}ERROR: Incorrect MAC length...\n"
+  printf "\n${REDT}[!] ${NC}ERROR: Invalid MAC address...\n"
   exit
 fi
 
