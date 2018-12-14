@@ -3,7 +3,7 @@
 
 ## What is it?
 
-MacSwap allows you to easily change your MAC address. This can be useful in a variety of cases, all of which are accommodated for by MacSwap.
+MacSwap allows you to quickly and easily change your MAC address. This can be useful in a variety of situations, all of which are accommodated for by MacSwap.
 
 ## Usage
 
@@ -19,17 +19,17 @@ The script is fairly easy to use, simply run it using the command above and ente
 
 For more information on the options, read below:
 
-| Option | Name | Description |
-| --- | --- | --- |
-| 1 | Bypass login page | Allows you to connect to a network which would otherwise require registration. This clones a MAC address already connected to the network. |
-| 2 | Bypass restriction | Allows you to connect to a network which may filter which types of devices can connect to a network. This clones a MAC address already connected to the network with the exception of the last two characters. |
-| 3 | Random | As the name implies, this will randomise your MAC address. This can be helpful when avoiding MAC address tracking (e.g. in airports). |
-| 4 | Custom | Allows you to choose your own MAC address. |
-| 5 | Reset | Will simply reset your MAC address to its true value. |
+| Name | Description |
+| --- | --- |
+| Bypass login page | Allows you to connect to a network which would otherwise require registration. This clones a MAC address already connected to the network. |
+| Bypass restriction | Allows you to connect to a network which may filter which types of devices can connect to a network. This clones a MAC address already connected to the network with the exception of the last two characters. |
+| Random | As the name implies, this will randomise your MAC address. This can be helpful when avoiding MAC address tracking (e.g. in airports). |
+| Custom | Allows you to choose your own MAC address. |
+| Reset | Will simply reset your MAC address to its true value. |
 
 ## Notes
 
-For options 1 and 2, you must connect to the desired network for a short period of time before running the script (typically 30 seconds). This is in order to capture a pre-existing MAC address on the network.
+For options 1 and 2, you must connect to the desired network for a short period of time before running the script (typically 30 seconds) in order to capture a pre-existing MAC address on the network.
 
 Your MAC address automaticlly resets after restarting your computer so take this into consideration when spoofing.
 
