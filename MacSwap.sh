@@ -83,7 +83,8 @@ if [ "$CHOSENOPTION" == "1" ] || [ "$CHOSENOPTION" == "2" ]; then
     printf "${REDT}[!] ${NC}ERROR: Scan failure, run again...\n"
     exit
   elif [ "$SCANLENGTH" -gt "1" ]; then
-    ARPMAC="$( echo "$ARPSCAN" | sed -n '2p' )"
+    HALFLENGTH=$(($SCANLENGTH / 2))
+    ARPMAC="$( echo "$ARPSCAN" | sed -n "${HALFLENGTH}p" )"
   else
     ARPMAC=$ARPSCAN
   fi
