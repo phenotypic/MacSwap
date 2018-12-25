@@ -9,7 +9,7 @@ MacSwap allows you to quickly and easily change your MAC address. This can be us
 
 Download and run the script with:
 ```
-git clone https://github.com/Tommrodrigues/MacSwap
+git clone https://github.com/Tommrodrigues/MacSwap.git
 bash ~/MacSwap/MacSwap.sh
 ```
 
