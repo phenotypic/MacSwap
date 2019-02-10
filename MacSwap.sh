@@ -41,18 +41,15 @@ if [ "$OSTYPE" != "Darwin" ]; then
   exit
 fi
 
-WIFIHARDWARELINE="$( networksetup -listallhardwareports | grep -Fn 'Wi-Fi' | cut -d: -f1 )"
-INTERFACELINE=$(($WIFIHARDWARELINE + 1))
-WIFIINTERFACENAME="$( networksetup -listallhardwareports | sed ''"${INTERFACELINE}"'!d' | cut -d " " -f 2 )"
-REALMACLINE=$(($WIFIHARDWARELINE + 2))
-REALMAC="$( networksetup -listallhardwareports | sed ''"${REALMACLINE}"'!d' | cut -d " " -f 3 )"
+WIFIINTERFACENAME="$( networksetup -listallhardwareports | awk '/Hardware Port: Wi-Fi/{getline; print $2}' )"
+REALMAC="$( networksetup -listallhardwareports | awk '/Hardware Port: Wi-Fi/{getline;getline; print $3}' )"
 
 sudo -v
 
-ORIGINALMAC="$( ifconfig $WIFIINTERFACENAME | awk '/ether/{print $2}' )"
+CURRENTMAC="$( ifconfig $WIFIINTERFACENAME | awk '/ether/{print $2}' )"
 
 printf "${BLUET}[*] ${NC}Real MAC address:    ${DARKGRAY}$REALMAC${NC}\n"
-printf "${BLUET}[*] ${NC}Current MAC address: ${DARKGRAY}$ORIGINALMAC${NC}\n"
+printf "${BLUET}[*] ${NC}Current MAC address: ${DARKGRAY}$CURRENTMAC${NC}\n"
 
 printf "\n${DUN}Options:${NC}"
 printf "\n${DARKGRAY}[1]${NC} Bypass login page"
@@ -112,7 +109,7 @@ if [ "$CHOSENOPTION" == "4" ]; then
 fi
 
 if [ "$CHOSENOPTION" == "5" ]; then
-  if [ "$REALMAC" == "$ORIGINALMAC" ]; then
+  if [ "$REALMAC" == "$CURRENTMAC" ]; then
     printf "\n${GREENT}[*] ${NC}MAC address already reset...\n"
     echo
     exit
@@ -128,14 +125,14 @@ if [ "$ARPMACLENGTH" != "17" ]; then
   exit
 fi
 
-printf "\n${BLUET}[*] ${NC}Changing MAC address from ${DARKGRAY}$ORIGINALMAC${NC} to ${DARKGRAY}$ARPMAC${NC}\n"
+printf "\n${BLUET}[*] ${NC}Changing MAC address from ${DARKGRAY}$CURRENTMAC${NC} to ${DARKGRAY}$ARPMAC${NC}\n"
 
 sudo ifconfig $WIFIINTERFACENAME up
 sudo ifconfig $WIFIINTERFACENAME ether $ARPMAC && sleep 0.5 && sudo ifconfig $WIFIINTERFACENAME down && sleep 1 && sudo ifconfig $WIFIINTERFACENAME up
 
 NEWMAC="$( ifconfig $WIFIINTERFACENAME | awk '/ether/{print $2}' )"
 
-if [ "$ORIGINALMAC" == "$NEWMAC" ]; then
+if [ "$CURRENTMAC" == "$NEWMAC" ]; then
   printf "\n${REDT}[!] ${NC}ERROR: No change to MAC address...\n"
   exit
 fi
