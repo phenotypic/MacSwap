@@ -21,17 +21,17 @@ For more information on the options, read below:
 
 | Name | Description |
 | --- | --- |
-| Bypass login page | Allows you to connect to a network which would otherwise require registration. This clones a MAC address already connected to the network. |
-| Bypass restriction | Allows you to connect to a network which may filter which types of devices can connect to a network. This clones a MAC address already connected to the network with the exception of the last two characters. |
-| Random | As the name implies, this will randomise your MAC address. This can be helpful when avoiding MAC address tracking (e.g. in airports). |
+| Bypass login page | Allows you to connect to a network which requires registration. This directly clones a MAC address connected to the network. |
+| Bypass restriction | Allows you to connect to a network which filters which types of devices can connect to a network. This clones a MAC address already connected to the network with the exception of the last two characters. |
+| Random | This will randomise your MAC address. This can be helpful when avoiding MAC address tracking (e.g. in airports). |
 | Custom | Allows you to choose your own MAC address. |
 | Reset | Will simply reset your MAC address to its true value. |
 
 ## Notes
 
-For options 1 and 2, you must connect to the desired network for a short period of time before running the script (typically 30 seconds) in order to capture a pre-existing MAC address on the network.
+- For options 1 and 2, you must connect to the desired network for a short period of time before running the script (typically 30 seconds or so) in order to capture pre-existing MAC addresses on the network.
 
-Your MAC address automaticlly resets after restarting your computer so take this into consideration when spoofing.
+- Your MAC address automaticlly resets after restarting your computer so take this into consideration when spoofing.
 
 ## Removal
 
