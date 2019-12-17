@@ -1,5 +1,4 @@
 # MacSwap
-#### Change your MAC address quickly and easily
 
 ## What is it?
 
