@@ -31,9 +31,3 @@ For more information on the options, read below:
 - For options 1 and 2, you must connect to the desired network for a short period of time before running the script (typically 30 seconds or so) in order to capture pre-existing MAC addresses on the network.
 
 - Your MAC address automaticlly resets after restarting your computer so take this into consideration when spoofing.
-
-## Removal
-
-```
-sudo rm -r ~/MacSwap
-```
