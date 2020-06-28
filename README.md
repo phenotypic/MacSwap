@@ -6,10 +6,14 @@ See [MacSwapPy](https://github.com/Tommrodrigues/MacSwapPy) for a new streamline
 
 ## Usage
 
-Download and run the script with:
+Download with:
 ```
 git clone https://github.com/Tommrodrigues/MacSwap.git
-bash ~/MacSwap/MacSwap.sh
+```
+
+Run with:
+```
+bash MacSwap.sh
 ```
 
 The script is fairly easy to use, simply run it using the command above and enter your `sudo` password when prompted. After running the script, you will be given the following options:
