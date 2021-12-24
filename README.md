@@ -2,13 +2,13 @@
 
 MacSwap allows you to quickly and easily change your MAC address. This can be useful in a variety of situations, all of which are accommodated for by MacSwap. The script is for educational purposes and should not be misused.
 
-See [MacSwapPy](https://github.com/Tommrodrigues/MacSwapPy) for a new streamlined version of this script
+See [MacSwapPy](https://github.com/phenotypic/MacSwapPy) for a new streamlined version of this script
 
 ## Usage
 
 Download with:
 ```
-git clone https://github.com/Tommrodrigues/MacSwap.git
+git clone https://github.com/phenotypic/MacSwap.git
 ```
 
 Run with:

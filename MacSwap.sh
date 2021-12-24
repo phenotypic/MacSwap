@@ -32,7 +32,7 @@ cat << "EOF"
                   |_|  |_|\__,_|\___|_____/ \_/\_/ \__,_| .__/
                                                         | |
                                                         |_|
-     GitHub : https://github.com/Tommrodrigues/MacSwap
+     GitHub : https://github.com/phenotypic/MacSwap
 
 EOF
 
