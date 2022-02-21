@@ -16,7 +16,7 @@ Run from the same directory with:
 bash MacSwap.sh
 ```
 
-The script is fairly easy to use, simply run it using the command above and enter your sudo password when prompted. Here is some more information about the avilable options:
+The script is fairly easy to use, simply run it using the command above and enter your `sudo` password when prompted. Here is some more information about the avilable options:
 
 | Name | Description |
 | --- | --- |
