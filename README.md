@@ -11,16 +11,12 @@ Download with:
 git clone https://github.com/phenotypic/MacSwap.git
 ```
 
-Run with:
+Run from the same directory with:
 ```
-bash from same directory MacSwap.sh
+bash MacSwap.sh
 ```
 
-The script is fairly easy to use, simply run it using the command above and enter your `sudo` password when prompted. After running the script, you will be given the following options:
-
-![Example](https://i.ibb.co/9n3JjJq/Screenshot-2018-12-06-at-14-39-57.png)
-
-For more information on the options, read below:
+The script is fairly easy to use, simply run it using the command above and enter your sudo password when prompted. Here is some more information about the avilable options:
 
 | Name | Description |
 | --- | --- |
